@@ -6,17 +6,32 @@
   <artifactId>RaviCalculator</artifactId>
   <version>1.0.1</version>
   <packaging>jar</packaging>
-<configuration>
-  <archive>
-	<manifest>
-<addClasspath>true</addClasspath>
- <mainClass>com.package.Calculator</mainClass>
 
-	</manifest>
-  </archive>
-</configuration>
   <name>RaviCalculator</name>
   <url>http://maven.apache.org</url>
+<!-- include below build tag to your existing pom.xml  --> 
+<build>
+ <plugins>
+     <plugin> 
+
+                <!-- Building an executable jar -->
+
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>1.0.1</version>
+                <configuration>
+                  <archive>
+                    <manifest>
+
+                    <!-- give full qualified name of your main class-->
+                      <mainClass>com.ravi.cal</mainClass>
+
+                    </manifest>
+                  </archive>
+                </configuration>
+    </plugin>
+ </plugins>
+</build>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
