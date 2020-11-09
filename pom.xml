@@ -6,7 +6,15 @@
   <artifactId>RaviCalculator</artifactId>
   <version>1.0.1</version>
   <packaging>jar</packaging>
+<configuration>
+  <archive>
+	<manifest>
+<addClasspath>true</addClasspath>
+ <mainClass>com.package.Calculator</mainClass>
 
+	</manifest>
+  </archive>
+</configuration>
   <name>RaviCalculator</name>
   <url>http://maven.apache.org</url>
 
