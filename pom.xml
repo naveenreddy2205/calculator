@@ -10,28 +10,6 @@
   <name>RaviCalculator</name>
   <url>http://maven.apache.org</url>
 
-<!-- <build>
- <plugins>
-     <plugin> 
-
-           
-
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>1.0.1</version>
-                <configuration>
-                  <archive>
-                    <manifest>
-
-                
-                      <mainClass>com.ravi.cal</mainClass>
-
-                    </manifest>
-                  </archive>
-                </configuration>
-    </plugin>
- </plugins>
-</build> -->
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -51,5 +29,23 @@
     <url>http://3.84.194.155:8081/nexus/content/repositories/releases</url>
   </repository>
 </distributionManagement>
+ <build>
+      <plugins>
+         <plugin>
+            <!-- Building an executable jar -->
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.1.0</version>
+            <configuration>
+               <archive>
+                  <manifest>
+                     <!-- give full qualified name of your main class-->
+                     <mainClass>com.ravi.cal.RaviCalculator.Calculator</mainClass>
+                  </manifest>
+               </archive>
+            </configuration>
+         </plugin>
+      </plugins>
+   </build>
 </project>
 
